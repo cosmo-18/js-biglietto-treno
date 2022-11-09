@@ -5,23 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets /style.css">
     <title></title>
 </head>
 <body>
-    <div id="stampa del biglietto"></div>
-        <h1>Prenota il tuo biglietto</h1>
-        <form>
-          <input type="date" name="quant" id="quant" placeholder="Data" />
-          <input class="destinazione" type="text" name="Destinazione" id="Destinazione" placeholder="Destinazione" />
-          <select name="" id="">
-            
+  <div class="all-code">
+  <header>
+    <!-- <h1>Prenota il tuo biglietto</h1> -->
+    <!-- <img src="Assets /img/Trenitalia_logo.svg" alt=""> -->
+  </header>
+        <div class="tab">
+          <div class="form">
+          <input type="text" name="quant" id="age" placeholder="Età del passegero"onclick="data()"/>
+          <select name="città" id="città" place-holder="Destinazione">
+          <option value="Taranto">Taranto</option>
+          <option value="Bologna">Bologna</option>
+          <option value="Roma">Roma</option>
           </select>
-          <input class="button" type="button" value="calcola" onclick="Calcola()" />
-          <input class="prezz" type="text" name="Prezzo" id="prezzo" placeholder="Prezzo" />
-        </form>
+          <input class="button" type="button" value="calcola" onclick="Acquisizione()" />
+          <div class="form-prezzo">
+            Il prezzo è:
+          <span id="risultato">&euro;</span>
+          <div class="sconto">
+            E' stato applicato uno sconto:
+            <span id="scontoapplicato">&euro;</span>
+          </div>
+        </div>
+        </div>
+        </div>
       </div>
     
-    <script type="text/javaScript" src="./main.js"></script>
+    <script src="assets /script/main.js"></script>
 </body>
 </html>
