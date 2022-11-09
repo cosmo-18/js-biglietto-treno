@@ -15,18 +15,25 @@ function Acquisizione() {
 
     if (città == 'Bologna' ) {
         risultato = 900 * prezzKm;
+    } 
+    
+    if(!età){
+    sconto=0;    
+}
 
-    } else if (età<=18) {
+    else if (età<=18) {
         sconto = (risultato*20)/100;
-        totale = risultato - sconto;
 
     } else if (età>=65) {
         sconto = (risultato*40)/100; 
-        totale = risultato - sconto
     }
-    
+
+    else{
+
+    }
+    totale= risultato - sconto;
     document.getElementById('risultato').innerHTML = risultato;
-    document.getElementById('scontoapplicato').innerHTML= totale
+    document.getElementById('scontoapplicato').innerHTML= totale;
    
 
     }
